@@ -7,11 +7,23 @@
          `Stort grattis 🥂`,
          `Grattis ${name}! 🥳`,
          `Hip hip hurra ${name}! 🎈🎈🎈`,
-         `Grattis ${name}! 🤩🍻`
+         `Grattis ${name}! 🤩🍻`,
+         `Grattis ${name}!`,
+         `Grattis på dagen! 🥳`,
+         `Grattis ${name}! 🥳🎉`,
+         `Grattis!! 🥳`,
+         `Grattis ${name}!`,
+         `Hipp hipp HURRA!`,
+         `Stort grattis på stora dagen! 🥳`,
+         `Grattis! :)`,
+         `Grattis på födelsedagen! 🎉`,
+         `Stort grattis ${name}`,
+         `Stort Grattis ${name}!!`,
+         `Grattis!!`,
+         `Stort grattis på födelsedagen!`
       ];
       return MESSAGE[Math.floor(Math.random() * MESSAGE.length)];
    }
-
 
    birthdayEls.forEach((birthdayEl) => {
 
