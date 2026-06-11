@@ -1,5 +1,5 @@
 (() => {
-   const birthdayEls = document.querySelectorAll('.birthdays-item-holder');
+   const birthdayEls = document.querySelectorAll('.sv-lbr-bday-list');
 
    function getRandomMessage(name) {
       const MESSAGE = [
@@ -27,21 +27,23 @@
 
    birthdayEls.forEach((birthdayEl) => {
 
-      const birthdayNameEl = birthdayEl.querySelector('.birthdays-item-name-holder');
-      const name           = birthdayNameEl.querySelector('b').textContent;
+      const birthdayNameEl = birthdayEl.querySelector('.env-card .env-card .env-card__body > div:first-child');
+      const name           = birthdayNameEl.querySelector('strong').textContent;
       if (birthdayNameEl) {
          const inputCommentEl = birthdayEl.querySelector(
-            '.birthdays-item-input input[type="text"]'
-         );
-         const sendCommentEl  = birthdayEl.querySelector(
-            '.birthdays-item-input [data-send-comment]'
+            'input[type="text"]'
          );
          const likeEl         = birthdayEl.querySelector(
-            '.birthdays-item-thumbsup-holder [data-send-like]'
+            '.env-card .env-card .env-card__body > div:last-child button:last-child'
          );
-         if (name && inputCommentEl && sendCommentEl) {
+         if (name && inputCommentEl) {
             inputCommentEl.value = getRandomMessage(name);
-            sendCommentEl.click();
+            setTimeout(() => {
+               const sendCommentEl  = birthdayEl.querySelector(
+                  '[type="submit"]'
+               );
+               sendCommentEl && sendCommentEl.click();
+            }, 1);
          }
          if (likeEl) {
             likeEl.click();
